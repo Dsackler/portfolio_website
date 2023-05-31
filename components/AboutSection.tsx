@@ -55,7 +55,7 @@ export const AboutSection = () => {
               })}
             </div>
             <Image
-              className='hidden md:block md:relative md:bottom-4 md:left-32 md:z-0'
+              className='rounded-md hidden md:block md:relative md:bottom-2 md:left-10 md:z-0'
               src='/Programmer-image.jpg'
               alt=''
               width={325}
