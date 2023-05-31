@@ -31,13 +31,23 @@ export const Navbar = () => {
   const [navBar, setNavBar] = useState(false);
 
   return (
-    <nav className='w-full mx-auto px-4 sm:px-20 top-0 z-50 shadow dark:border-b dark:border-stone-600'>
+    <nav className='w-full mx-auto px-4 sm:px-20 top-0 fixed z-50 shadow bg-stone-400 dark:border-b dark:border-stone-600'>
       <div className='justify-between md:items-center md:flex'>
         <div>
           <div className='flex items-center justify-between py-3'>
-            <div className='md:py-5 md:block'>
-              <h2 className='text-2xl font-bold'>David Sackler</h2>
-            </div>
+            <Link
+              className='cursor-pointer'
+              activeClass='active'
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={500}
+              to='home'
+            >
+              <div className='md:py-5 md:block'>
+                <h2 className='text-2xl font-bold'>David Sackler</h2>
+              </div>
+            </Link>
             <div className='md:hidden'>
               <button onClick={() => setNavBar(!navBar)}>
                 {navBar ? <IoMdClose size={30} /> : <IoMdMenu size={30} />}

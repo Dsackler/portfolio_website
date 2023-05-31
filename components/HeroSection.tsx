@@ -24,7 +24,7 @@ const HeroSection = () => {
             <span className='font font-semibold text-teal-600'>
               Software Engineer{' '}
             </span>
-            based in Los Angeles, CA. I work towards building innovated
+            based in Los Angeles, CA. I work towards building innovative
             solutions to make lives easier
           </p>
           <Link
