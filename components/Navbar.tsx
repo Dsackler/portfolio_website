@@ -1,9 +1,11 @@
 'use client';
 import React, { useState } from 'react';
-import { Link } from 'react-scroll/modules';
+import Link from 'next/link';
+import { Link as _link } from 'react-scroll/modules';
 import { useTheme } from 'next-themes';
 import { RiMoonFill, RiSunLine } from 'react-icons/ri';
 import { IoMdMenu, IoMdClose } from 'react-icons/io';
+import API from '@/app/dev_api/page';
 
 interface NavItem {
   label: string;
@@ -35,7 +37,7 @@ export const Navbar = () => {
       <div className='justify-between md:items-center md:flex'>
         <div>
           <div className='flex items-center justify-between py-3'>
-            <Link
+            <_link
               className='cursor-pointer'
               activeClass='active'
               spy={true}
@@ -47,7 +49,7 @@ export const Navbar = () => {
               <div className='md:py-5 md:block'>
                 <h2 className='text-2xl font-bold'>David Sackler</h2>
               </div>
-            </Link>
+            </_link>
             <div className='md:hidden'>
               <button onClick={() => setNavBar(!navBar)}>
                 {navBar ? <IoMdClose size={30} /> : <IoMdMenu size={30} />}
@@ -65,7 +67,7 @@ export const Navbar = () => {
               <>
                 {NAV_ITEMS.map((item, idx) => {
                   return (
-                    <Link
+                    <_link
                       key={idx}
                       to={item.page}
                       className={
@@ -79,9 +81,12 @@ export const Navbar = () => {
                       onClick={() => setNavBar(!navBar)}
                     >
                       {item.label}
-                    </Link>
+                    </_link>
                   );
                 })}
+                <Link href={'/dev_api'}>
+                  <p className='hover:text-neutral-500'>API</p>
+                </Link>
                 {/* themes work only if theme provider is wrapped around the component in layout */}
                 {currentTheme === 'dark' ? (
                   <button

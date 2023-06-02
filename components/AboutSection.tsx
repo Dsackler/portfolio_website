@@ -29,7 +29,8 @@ export const AboutSection = () => {
               Get to know me!
             </h1>
             <p>
-              I work well in both
+              My name is David and I'm based is Los Angeles, CA. I work well in
+              both
               <span className='font-bold'> group collaborative</span> and
               <span className='font-bold'> independent settings</span>. In small
               groups, I excel at contributing technical solutions and

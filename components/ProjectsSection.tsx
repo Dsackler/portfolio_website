@@ -13,6 +13,14 @@ const projects = [
     github: 'https://github.com/Dsackler/Blogging_platform',
     link: 'https://google.com',
   },
+  {
+    name: 'Top Movies',
+    description:
+      'Fullstack nextjs webapp that fetches the top rated movies from The Movie DB',
+    image: '/film-reel.png',
+    github: 'https://github.com/Dsackler/top_movies',
+    link: 'https://google.com',
+  },
 ];
 
 export const ProjectsSection = () => {
