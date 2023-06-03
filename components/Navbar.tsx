@@ -5,7 +5,6 @@ import { Link as _link } from 'react-scroll/modules';
 import { useTheme } from 'next-themes';
 import { RiMoonFill, RiSunLine } from 'react-icons/ri';
 import { IoMdMenu, IoMdClose } from 'react-icons/io';
-import API from '@/app/dev_api/page';
 
 interface NavItem {
   label: string;
