@@ -36,19 +36,11 @@ export const Navbar = () => {
       <div className='justify-between md:items-center md:flex'>
         <div>
           <div className='flex items-center justify-between py-3'>
-            <_link
-              className='cursor-pointer'
-              activeClass='active'
-              spy={true}
-              smooth={true}
-              offset={-100}
-              duration={500}
-              to='home'
-            >
+            <Link href={'/'}>
               <div className='md:py-5 md:block'>
                 <h2 className='text-2xl font-bold'>David Sackler</h2>
               </div>
-            </_link>
+            </Link>
             <div className='md:hidden'>
               <button onClick={() => setNavBar(!navBar)}>
                 {navBar ? <IoMdClose size={30} /> : <IoMdMenu size={30} />}

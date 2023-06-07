@@ -6,17 +6,20 @@ import { nanoid } from 'nanoid';
 export default function Page() {
   const [viewKey, setViewKey] = useState(false);
   const [clicked, setClicked] = useState(false);
+  const [key, setKey] = useState('');
 
   const handleClick = () => {
     setViewKey(!viewKey);
     setClicked(true);
+    if (key === '') {
+      setKey(nanoid());
+    }
   };
 
-  const model = {
-    id: '',
-  };
-  model.id = nanoid();
-  console.log(model.id);
+  // const model = {
+  //   id: '',
+  // };
+
   return (
     <div className='flex flex-col justify-center items-center mt-40'>
       <h1>Get your API key here:</h1>
@@ -31,7 +34,7 @@ export default function Page() {
           Generate Key
         </button>
       </div>
-      {viewKey && model.id}
+      {viewKey && key}
       <div>
         <h1 className='font-bold text-4xl'>API documentation</h1>
         <p>Just send a get request to url/api/*apikey* you dingus</p>
